@@ -3,6 +3,7 @@ import { Switch, Route, useRouteMatch } from 'react-router-dom';
 import Spacings from '@commercetools-uikit/spacings';
 import Channels from './components/channels';
 import Welcome from './components/welcome';
+import Descriptions from './components/descriptions';
 
 type ApplicationRoutesProps = {
   children?: ReactNode;
@@ -25,10 +26,10 @@ const ApplicationRoutes = (_props: ApplicationRoutesProps) => {
     <Spacings.Inset scale="l">
       <Switch>
         <Route path={`${match.path}/channels`}>
-          <Channels linkToWelcome={match.url} />
+          <Descriptions />
         </Route>
         <Route>
-          <Welcome />
+        <Descriptions />
         </Route>
       </Switch>
     </Spacings.Inset>
